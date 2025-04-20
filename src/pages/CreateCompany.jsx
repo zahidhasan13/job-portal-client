@@ -19,7 +19,7 @@ const CreateCompany = () => {
 
   const onSubmit = async (data) => {
     try {
-        const res = await axios.post('http://localhost:8400/api/company/register', data,{
+        const res = await axios.post('https://job-portal-server-seven-umber.vercel.app/api/company/register', data,{
             headers: {
                 'Content-Type': 'application/json',
             },

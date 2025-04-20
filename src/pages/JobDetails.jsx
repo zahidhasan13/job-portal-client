@@ -43,7 +43,7 @@ const JobDetails = () => {
     try {
       const res = await axios.get(
         // Changed to POST as applying is typically a POST request
-        `http://localhost:8400/api/application/apply/${id}`,
+        `https://job-portal-server-seven-umber.vercel.app/api/application/apply/${id}`,
         {
           withCredentials: true,
         }
@@ -73,7 +73,7 @@ const JobDetails = () => {
   useEffect(() => {
     const getSingleJobs = async () => {
       try {
-        const res = await axios.get(`http://localhost:8400/api/job/${id}`, {
+        const res = await axios.get(`https://job-portal-server-seven-umber.vercel.app/api/job/${id}`, {
           withCredentials: true,
         });
 

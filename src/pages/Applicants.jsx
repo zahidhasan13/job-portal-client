@@ -33,7 +33,7 @@ const Applicants = () => {
     const fetchApplicants = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8400/api/application/${id}/applicant`,
+          `https://job-portal-server-seven-umber.vercel.app/api/application/${id}/applicant`,
           { withCredentials: true }
         );
         console.log(response.data.job.applications, "app");
@@ -50,7 +50,7 @@ const Applicants = () => {
     const statusHandler = async (status, applicationId) => {
     try {
       const response = await axios.post(
-        `http://localhost:8400/api/application/status/${applicationId}/update`,
+        `https://job-portal-server-seven-umber.vercel.app/api/application/status/${applicationId}/update`,
         { status },
         { withCredentials: true }
       );

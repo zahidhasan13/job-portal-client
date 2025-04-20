@@ -101,7 +101,7 @@ const UpdateCompanyForm = () => {
       
       setIsLoading(true);
       const res = await axios.patch(
-        `http://localhost:8400/api/company/update/${company?._id}`,
+        `https://job-portal-server-seven-umber.vercel.app/api/company/update/${company?._id}`,
         formData,
         {
           headers: {

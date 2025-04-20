@@ -67,7 +67,7 @@ const UpdateJobPost = () => {
   const handleSubmit = async (data) => {
     console.log(data.skills,"post");
     try {
-      const res = await axios.patch(`http://localhost:8400/api/job/${singleJob._id}`, data,{
+      const res = await axios.patch(`https://job-portal-server-seven-umber.vercel.app/api/job/${singleJob._id}`, data,{
         headers: {
           'Content-Type': 'application/json',
         },

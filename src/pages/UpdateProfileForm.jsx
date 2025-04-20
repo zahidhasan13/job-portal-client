@@ -67,7 +67,7 @@ const UpdateProfileForm = () => {
       });
 
       const response = await axios.post(
-        "http://localhost:8400/api/user/profile/update",
+        "https://job-portal-server-seven-umber.vercel.app/api/user/profile/update",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },

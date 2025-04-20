@@ -43,7 +43,7 @@ const CompanyDetails = () => {
     // Fetch company details
     const getCompanyDetails = async () => {
       try {
-        const res = await axios.get(`http://localhost:8400/api/company/${id}`,{withCredentials:true});
+        const res = await axios.get(`https://job-portal-server-seven-umber.vercel.app/api/company/${id}`,{withCredentials:true});
         console.log(res.data);
         if (res.status === 200) {
           dispatch(setSingleCompany(res.data));

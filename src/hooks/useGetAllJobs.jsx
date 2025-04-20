@@ -11,7 +11,7 @@ const useGetAllJobs = () => {
         
             const getAllJobs = async ()=>{
                 try {
-                const res = await axios.get(`http://localhost:8400/api/job?keyword=${searchedQuery}`,{withCredentials: true})
+                const res = await axios.get(`https://job-portal-server-seven-umber.vercel.app/api/job?keyword=${searchedQuery}`,{withCredentials: true})
                 if (res.status === 200) {
                     dispatch(setAllJobs(res.data));
                   }

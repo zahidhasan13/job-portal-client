@@ -39,7 +39,7 @@ const JobPost = () => {
 
   const handleSubmit = async (data) => {
     try {
-      const res = await axios.post("http://localhost:8400/api/job", data, {
+      const res = await axios.post("https://job-portal-server-seven-umber.vercel.app/api/job", data, {
         headers: {
           "Content-Type": "application/json",
         },

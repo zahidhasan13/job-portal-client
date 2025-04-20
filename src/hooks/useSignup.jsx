@@ -14,7 +14,7 @@ const useSignup = () => {
         setIsLoading(true);
 
         try {
-            const res = await axios.post("http://localhost:8400/api/user/signup", data, {
+            const res = await axios.post("https://job-portal-server-seven-umber.vercel.app/api/user/signup", data, {
                 headers: {
                     "Content-Type": "application/json"
                 }

@@ -9,7 +9,7 @@ const useGetAllRecruiterJobs = () => {
   useEffect(() => {
     const getAllAdminJobs = async () => {
       try {
-        const res = await axios.get("http://localhost:8400/api/job/adminJobs", {
+        const res = await axios.get("https://job-portal-server-seven-umber.vercel.app/api/job/adminJobs", {
           withCredentials: true,
         });
         if (res.status === 200) {

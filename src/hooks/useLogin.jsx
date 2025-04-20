@@ -18,7 +18,7 @@ const useLogin = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8400/api/user/login",
+        "https://job-portal-server-seven-umber.vercel.app/api/user/login",
         data,
         {
           headers: {

@@ -24,7 +24,7 @@ const Header = () => {
 
   const handleLogout = async () => {
     try {
-      const res = await axios.get("http://localhost:8400/api/user/logout", {
+      const res = await axios.get("https://job-portal-server-seven-umber.vercel.app/api/user/logout", {
         withCredentials: true,
       });
       console.log(res);

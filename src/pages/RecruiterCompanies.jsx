@@ -26,7 +26,7 @@ const RecruiterCompanies = () => {
   useEffect(() => {
     const getAllCompanies = async () => {
       try {
-        const res = await axios.get('http://localhost:8400/api/company', { withCredentials: true });
+        const res = await axios.get('https://job-portal-server-seven-umber.vercel.app/api/company', { withCredentials: true });
         if (res.status === 200) {
           dispatch(setAllCompanies(res.data));
         }
@@ -58,7 +58,7 @@ const RecruiterCompanies = () => {
   
     if (result.isConfirmed) {
       try {
-        const res = await axios.delete(`http://localhost:8400/api/company/delete/${id}`, { withCredentials: true });
+        const res = await axios.delete(`https://job-portal-server-seven-umber.vercel.app/api/company/delete/${id}`, { withCredentials: true });
         if (res.status === 200) {
           toast.success(res.data.message);
           dispatch(deleteCompany(id));

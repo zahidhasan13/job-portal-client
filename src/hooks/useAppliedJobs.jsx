@@ -8,7 +8,7 @@ const useAppliedJobs = () => {
   useEffect(() => {
     const getAppliedJobs = async () => {
       try {
-        const res = await axios.get("http://localhost:8400/api/application", {
+        const res = await axios.get("https://job-portal-server-seven-umber.vercel.app/api/application", {
           withCredentials: true,
         });
         console.log(res.data.application);

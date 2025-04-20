@@ -78,7 +78,7 @@ const RecruiterJobs = () => {
   
     if (result.isConfirmed) {
       try {
-        const res = await axios.delete(`http://localhost:8400/api/job/delete/${id}`, { withCredentials: true });
+        const res = await axios.delete(`https://job-portal-server-seven-umber.vercel.app/api/job/delete/${id}`, { withCredentials: true });
         if (res.status === 200) {
           toast.success(res.data.message);
           dispatch(deleteJob(id));
